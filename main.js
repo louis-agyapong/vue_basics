@@ -7,13 +7,24 @@ var app = new Vue({
     details: ["80% cotton", "20% cotton", "gender neutral"],
     variants: [
       {
-        id: 2234,
+        variantId: 2234,
         color: "green",
+        image: "./assets/img/green_socks.jpg",
       },
       {
-        id: 2235,
+        variantId: 2235,
         color: "blue",
+        image: "./assets/img/blue_socks.png",
       },
-    ]
+    ],
+    cart: 0,
   },
+  methods: {
+    addToCart() {
+      this.cart += 1;
+    },
+    updateProduct(image) {
+      this.image = image;
+    }
+  }
 });
